@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <style>
+        html {
+            font-family: monospace;
+            color: white;
+        }
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
+        body {
+            margin: 0;
+            background-color: black;
+        }
+        canvas#particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            image-rendering: pixelated;
+            transform-origin: center;
+        }
+        #ui {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+        .field {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            align-items: center;
+            gap: 2rem;
+        }
+        .number {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            text-align: center;
+            gap: 1rem;
+        }
+        button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="ui">
+        <div class="field" id="noParticles">
+            <div># of particles</div>
+            <div class="number">
+                <button>&#9660;</button>
+                <span></span>
+                <button>&#9650;</button>
+            </div>
+        </div>
+        <div class="field" id="zoom">
+            <div>zoom</div>
+            <div class="number">
+                <button>&#9660;</button>
+                <span></span>
+                <button>&#9650;</button>
+            </div>
+        </div>
+    </div>
+    <canvas id="particles"></canvas>
+    <script src="./lib.js"></script>
+    <script src="./canvas.js"></script>
+    <script src="./obj.js"></script>
+    <script src="./script.js"></script>
+    <script src="./ui.js"></script>
+</body>
+</html>
